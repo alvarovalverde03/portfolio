@@ -1,5 +1,8 @@
-<a href="/" class="btn">Download CV</a>
+<script>
+    export let text = '';
+</script>
 
+<a href="/" target="_blank" class="btn">{text}</a>
 
 <style>
     .btn {
@@ -16,6 +19,6 @@
     }
 
     .btn:hover {
-        box-shadow: 3px -3px 0 0 var(--clr-txt);
+        box-shadow: 2px -2px 0 0 var(--clr-txt);
     }
 </style>

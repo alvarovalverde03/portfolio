@@ -5,7 +5,7 @@
 
 <footer>
 	<p>{config.title} &copy {new Date().getFullYear()}</p>
-	<Button />
+	<Button text='Download CV' />
 </footer>
 
 <style>

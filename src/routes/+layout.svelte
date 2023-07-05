@@ -2,8 +2,14 @@
     import Header from './header.svelte';
     import Footer from './footer.svelte';
 
+    import * as config from '../lib/config';
+
     import '../styles/styles.css'
 </script>
+
+<svelte:head>
+    <title>{config.title}</title>
+</svelte:head>
 
 <div class="layout">
     <Header />

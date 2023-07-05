@@ -52,7 +52,7 @@ body {
 }
 
 body {
-	font-family: var(--font-sans);
+	font-family: var(--font-mono);
 	font-size: var(--font-16);
 	color: var(--clr-txt);
 	background-color: var(--clr-bg);
@@ -61,16 +61,17 @@ body {
     padding: 0;
 }
 
-/* fixes issue where safari applies focus to body  */
+/* fixes issue where safari applies focus to body  
 body *:focus {
 	outline: none;
 	box-shadow: 0 0 0 4px var(--clr-primary);
 	border-radius: var(--rounded-20);
 }
+*/
 
 h1,
 h2 {
-	font-family: var(--font-sans);
+	font-family: var(--font-mono);
 	text-transform: capitalize;
 }
 
@@ -102,9 +103,11 @@ a {
 	z-index: 1;
 }
 
+/*
 a:hover {
 	color: var(--clr-primary);
 }
+*/
 
 a::before {
 	content: '';

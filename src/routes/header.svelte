@@ -1,29 +1,12 @@
 <script lang="ts">
     import * as config from '$lib/config';
+	import Nav from './components/nav.svelte';
 </script>
 
 <header>
-    <nav>
-        <a href="/">
-            <h1>{config.title}</h1>
-        </a>
-    </nav>
+	<Nav />
+	<h1>{config.title}</h1>
 </header>
 
 <style>
-	nav {
-		padding-block: 1rem;
-	}
-
-	a {
-		color: inherit;
-		text-decoration: none;
-	}
-
-	@media (min-width: 768px) {
-		nav {
-			display: flex;
-			justify-content: space-between;
-		}
-	}
 </style>

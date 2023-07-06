@@ -1,8 +1,9 @@
 <script>
     export let text = '';
+    export let url = '/';
 </script>
 
-<a href="/" target="_blank" class="btn">{text}</a>
+<a href={url} target="_blank" class="btn">{text}</a>
 
 <style>
     .btn {

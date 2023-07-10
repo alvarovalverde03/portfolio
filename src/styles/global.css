@@ -5,16 +5,19 @@
 	--font-inter: 'Inter', normal;
 
 	--font-16: 1.6rem;
+	--font-20: 2rem;
 	--font-24: 2.4rem;
+	--font-26: 2.6rem;
 	--font-32: 3.2rem;
+	--font-40: 4rem;
 	--font-48: 4.8rem;
 	--font-96: 9.6rem;
 
     /* Global */
 	--clr-accent: hsl(148, 59%, 61%);
 	--clr-primary: hsl(0, 0%, 57%);
-	--clr-txt: hsl(0 0% 98%);
-	--clr-bg: hsl(210 7% 11%);
+	--clr-txt: #fff;
+	--clr-bg: #000;
 
 	--bg: radial-gradient(hsl(173 100% 4%), var(--clr-bg));
 	--bg-opacity: 0.4;
@@ -78,12 +81,12 @@ h2 {
 }
 
 h1 {
-	font-size: clamp(var(--font-32), 4vw, var(--font-48));
+	font-size: clamp(var(--font-24), 4vw, var(--font-48));
 	line-height: clamp(48px, 6vw, 64px);
 }
 
 h2 {
-	font-size: clamp(var(--font-24), 4vw, var(--font-32));
+	font-size: clamp(var(--font-24), 4vw, var(--font-40));
 	line-height: clamp(32px, 6vw, 48px);
 }
 
@@ -145,17 +148,4 @@ td {
 img,
 iframe {
 	border-radius: var(--rounded-20);
-}
-
-@font-face {
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 400;
-	src: url(/src/fonts/Inter-Regular.ttf);
-}
-@font-face {
-	font-family: 'Inter';
-	font-style: bold;
-	font-weight: 700;
-	src: url(/src/fonts/Inter-Bold.ttf);
 }

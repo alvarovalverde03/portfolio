@@ -7,7 +7,7 @@
     <img class="presentation__profile_img" src="/alvaro.jpg" alt="Foto de perfil de Alvaro Valverde">
     <div class="presentation__info">
 	    <h2>{config.title}</h2>
-        <h1>Juior full stack developer</h1>
+        <h1>Junior full stack developer</h1>
         <Socials />
     </div>
 </section>

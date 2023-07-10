@@ -1,0 +1,151 @@
+:root {
+    /* Font */
+	--font-sans: 'Poppins', sans-serif;
+	--font-mono: 'Mono', monospace;
+	--font-inter: 'Inter', normal;
+
+	--font-16: 1.6rem;
+	--font-20: 2rem;
+	--font-24: 2.4rem;
+	--font-26: 2.6rem;
+	--font-32: 3.2rem;
+	--font-40: 4rem;
+	--font-48: 4.8rem;
+	--font-96: 9.6rem;
+
+    /* Global */
+	--clr-accent: hsl(148, 59%, 61%);
+	--clr-primary: hsl(0, 0%, 57%);
+	--clr-txt: #fff;
+	--clr-bg: #000;
+
+	--bg: radial-gradient(hsl(173 100% 4%), var(--clr-bg));
+	--bg-opacity: 0.4;
+
+	/* Spacing */
+	--spacing-4: 0.4rem;
+	--spacing-8: 0.8rem;
+	--spacing-16: 1.6rem;
+	--spacing-24: 2.4rem;
+	--spacing-32: 3.2rem;
+	--spacing-64: 6.4rem;
+	--spacing-128: 12.8rem;
+
+	/* Post */
+	--post-txt-size: 18px;
+	--post-txt-length: 70ch;
+	--post-txt-height: 40px;
+
+	/* Shadows */
+	--shadow-sm: 0px 0px 4px 4px hsl(0 0% 0% / 4%);
+	--shadow-md: 0px 0px 10px 4px hsl(0 0% 0% / 10%);
+	--shadow-lg: 0px 0px 20px 8px hsl(0 0% 0% / 20%);
+
+	/* Border radius */
+	--rounded-4: 4px;
+	--rounded-20: 20px;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-padding-top: var(--spacing-32);
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-family: var(--font-inter);
+	font-size: var(--font-16);
+	color: var(--clr-txt);
+	background-color: var(--clr-bg);
+
+    margin: 0;
+    padding: 0;
+}
+
+/* fixes issue where safari applies focus to body  
+body *:focus {
+	outline: none;
+	box-shadow: 0 0 0 4px var(--clr-primary);
+	border-radius: var(--rounded-20);
+}
+*/
+
+h1,
+h2 {
+	font-family: var(--font-inter);
+	text-transform: capitalize;
+}
+
+h1 {
+	font-size: clamp(var(--font-24), 4vw, var(--font-48));
+	line-height: clamp(48px, 6vw, 64px);
+}
+
+h2 {
+	font-size: clamp(var(--font-24), 4vw, var(--font-40));
+	line-height: clamp(32px, 6vw, 48px);
+}
+
+h3 {
+	font-size: var(--font-24);
+	line-height: 32px;
+}
+
+p {
+	line-height: 32px;
+}
+
+a {
+	position: relative;
+	color: var(--clr-link-txt);
+	text-decoration: none;
+	transition: color 0.3s ease;
+	z-index: 1;
+}
+
+/*
+a:hover {
+	color: var(--clr-primary);
+}
+*/
+
+a::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.3s ease;
+	background-color: var(--clr-link-background);
+	border-radius: 4px;
+	z-index: -1;
+}
+
+a:hover::before {
+	transform: scaleX(1);
+}
+
+table {
+	margin-bottom: var(--spacing-32);
+	border-collapse: collapse;
+}
+
+th,
+td {
+	padding: var(--spacing-16);
+	text-align: left;
+	border: 1px solid hsl(0 0% 100% / 40%);
+}
+
+img,
+iframe {
+	border-radius: var(--rounded-20);
+}

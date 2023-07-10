@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import Presentation from "./components/presentation.svelte";
 </script>
 

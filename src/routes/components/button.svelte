@@ -1,6 +1,6 @@
-<script>
-    export let text = '';
-    export let url = '/';
+<script lang="ts">
+    export let text:string;
+    export let url:string;
 </script>
 
 <a href={url} target="_blank" class="btn">{text}</a>

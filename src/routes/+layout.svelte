@@ -1,6 +1,7 @@
 <script lang="ts">
     import Header from './header.svelte';
     import Footer from './footer.svelte';
+	import Themes from "./components/themes.svelte";
 
     import * as config from '../lib/config';
 
@@ -18,6 +19,7 @@
     <!-- <Header /> -->
 
     <main>
+        <Themes />
         <slot />
     </main>
 

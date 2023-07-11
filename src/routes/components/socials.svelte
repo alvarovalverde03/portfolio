@@ -20,5 +20,7 @@
 	.socials svg {
 		width: 4rem;
 		height: 4rem;
+		
+		filter: var(--clr-svg);
 	}
 </style>

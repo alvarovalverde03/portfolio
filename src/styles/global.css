@@ -4,6 +4,10 @@
 	--font-mono: 'Mono', monospace;
 	--font-inter: 'Inter', normal;
 
+	/* Global */
+	--clr-accent: hsl(148, 59%, 61%);
+	--clr-primary: hsl(0, 0%, 57%);
+
 	--font-16: 1.6rem;
 	--font-20: 2rem;
 	--font-24: 2.4rem;
@@ -12,15 +16,6 @@
 	--font-40: 4rem;
 	--font-48: 4.8rem;
 	--font-96: 9.6rem;
-
-    /* Global */
-	--clr-accent: hsl(148, 59%, 61%);
-	--clr-primary: hsl(0, 0%, 57%);
-	--clr-txt: #fff;
-	--clr-bg: #000;
-
-	--bg: radial-gradient(hsl(173 100% 4%), var(--clr-bg));
-	--bg-opacity: 0.4;
 
 	/* Spacing */
 	--spacing-4: 0.4rem;

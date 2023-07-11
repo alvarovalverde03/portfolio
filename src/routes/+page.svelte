@@ -5,7 +5,7 @@
 <Presentation />
 
 <section style="font-size: var(--font-20); margin-bottom: 5rem">
-    <p>👋 Hi, I am Alvaro Valverde Blanco! Software engineer based on Madrid</p>
+    <p>👋 Hi, I am Alvaro Valverde Blanco! Software engineer based in Madrid</p>
 </section>
 <!--
 <section>

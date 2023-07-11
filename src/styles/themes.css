@@ -1,0 +1,13 @@
+html[data-theme='dark'] {
+    /* Global */
+	--clr-txt: #fff;
+	--clr-bg: #000;
+    --clr-svg: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+html[data-theme='light'] {
+    /* Global */
+	--clr-txt: #000;
+	--clr-bg: #fff;
+    --clr-svg: invert(100%) sepia(100%) saturate(0%) hue-rotate(87deg) brightness(119%) contrast(119%);
+}

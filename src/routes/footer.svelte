@@ -9,7 +9,7 @@
 	
 	<Socials />
 	
-	<Button text='Download CV' url="/" />
+	<Button text='Download CV' url="/CV_AlvaroValverdeBlanco_2023.pdf" />
 </footer>
 
 <style>

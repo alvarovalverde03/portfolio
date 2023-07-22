@@ -1,0 +1,1 @@
+// logic to get the posts data

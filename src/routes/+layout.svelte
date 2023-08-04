@@ -22,8 +22,8 @@
 <div class="layout">
     <!-- <Header /> -->
 
+    <Themes />
     <main>
-        <Themes />
         <slot />
     </main>
 

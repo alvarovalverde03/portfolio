@@ -1,5 +1,9 @@
 <script lang="ts">
     import Presentation from "./components/presentation.svelte";
+    import Blog from "./components/blog.svelte";
+
+    export let data
+    const { posts } = data
 </script>
 
 <Presentation />
@@ -37,6 +41,8 @@
     <h2>Projects</h2>
 </section>
 -->
+
+<Blog {posts}/>
 
 <style>
     @media (max-width: 1000px) {

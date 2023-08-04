@@ -7,7 +7,7 @@
     <h2>Blog</h2>
     <div class="posts">
         {#each posts as post}
-            <a href={post.slug} class="post">
+            <a href='/blog/{post.slug}' class="post">
 				<p class="title">{post.title}</p>
 				<p class="description">{post.description}</p>
             </a>

@@ -3,8 +3,6 @@
     import Footer from './footer.svelte';
 	import Themes from "./components/themes.svelte";
 
-    import * as config from '../lib/config';
-
     import '../styles/styles.css'
     
     import { dev } from '$app/environment';
@@ -12,12 +10,6 @@
     inject({ mode: dev ? 'development' : 'production' });
 </script>
 
-<svelte:head>
-    <title>{config.title} | Portfolio</title>
-    <meta name="description" content={config.description}>
-    <meta name="keywords" content="HTML, CSS, JavaScript, TypeScript, Full Stack, Frontend, Backend, Developer, NodeJS, Software Engineer">
-    <meta name="author" content={config.title}>
-</svelte:head>
 
 <div class="layout">
     <!-- <Header /> -->

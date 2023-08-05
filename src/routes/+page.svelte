@@ -1,10 +1,18 @@
 <script lang="ts">
+    import * as config from '../lib/config';
     import Presentation from "./components/presentation.svelte";
     import Blog from "./components/blog.svelte";
 
     export let data
     const { posts } = data
 </script>
+
+<svelte:head>
+    <title>{config.title} | Portfolio</title>
+    <meta name="description" content={config.description}>
+    <meta name="keywords" content="HTML, CSS, JavaScript, TypeScript, Full Stack, Frontend, Backend, Developer, NodeJS, Software Engineer">
+    <meta name="author" content={config.title}>
+</svelte:head>
 
 <Presentation />
 

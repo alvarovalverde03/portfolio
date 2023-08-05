@@ -29,8 +29,14 @@
     }
 
     .presentation .presentation__info h1 {
-        margin-bottom: 3rem;
+        margin-top: var(--spacing-32);
+        margin-bottom: var(--spacing-32);
         font-size: clamp(var(--font-26), 4vw, var(--font-48));
+    }
+
+    .presentation .presentation__info h2 {
+        margin-top: var(--spacing-24);
+        margin-bottom: var(--spacing-24);
     }
     
 	@media (max-width: 768px) {
@@ -38,6 +44,7 @@
             flex-direction: column;
             align-items: center;
             margin-top: 10rem;
+            margin-bottom: 8rem;
         }
         .presentation .presentation__info {
             width: 100%;
@@ -48,6 +55,16 @@
 		.presentation .presentation__profile_img {
             width: 20rem;
             height: 20rem;
+        }
+        
+        .presentation .presentation__info h1 {
+            margin-top: var(--spacing-24);
+            margin-bottom: var(--spacing-24);
+        }
+
+        .presentation .presentation__info h2 {
+            margin-top: var(--spacing-16);
+            margin-bottom: var(--spacing-16);
         }
 	}
 </style>

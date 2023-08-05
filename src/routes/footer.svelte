@@ -15,7 +15,7 @@
 <style>
 	footer {
 		padding: 1rem 0;
-		margin-top: 5rem;
+		margin-top: var(--spacing-64);
 		border-top: 1px solid var(--clr-primary);
 
 		display: flex;

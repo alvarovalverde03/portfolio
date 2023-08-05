@@ -4,40 +4,39 @@
 </script>
 
 <section>
-    <h2>Blog</h2>
+    <h2 class="title">Blog</h2>
     <div class="posts">
         {#each posts as post}
             <a href='/blog/{post.slug}' class="post">
-				<p class="title">{post.title}</p>
-				<p class="description">{post.description}</p>
+				<span class="title">{post.title}</span>
             </a>
 		{/each}
     </div>
 </section>
 
 <style>
+    .title {
+        margin-bottom: var(--spacing-16);
+    }
+
     .posts {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: var(--spacing-16);
     }
 
     .post {
-        background-color: rgb(94, 94, 94);
-        border-radius: 5px;
-        padding: 2rem 3rem;
+        padding: var(--spacing-8) var(--spacing-16);
+        background: var(--clr-bg-3);
+        border-radius: var(--rounded-4);
     }
+
     .post:hover {
-        background-color: rgb(94, 94, 94, 0.8);
+        background: var(--clr-bg-2);
     }
+    
     .post .title {
-        font-size: 2rem;
-        font-weight: bold;
-        text-decoration: none;
-    }
-    .post p {
-        margin-block-start: 0;
-        margin-block-end: 0;
+        font-size: var(--font-20);
     }
 
     @media (max-width: 1000px) {

@@ -1,2 +1,2 @@
-export const title = 'Alvaro Valverde'
-export const description = 'Alvaro\'s portfolio as fullstack developer'
+export const title = 'Álvaro Valverde Blanco'
+export const description = 'Álvaro\'s portfolio as fullstack developer'

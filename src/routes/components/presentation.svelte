@@ -6,8 +6,8 @@
 <section class="presentation">
     <img class="presentation__profile_img" src="/alvaro.jpg" alt="Foto de perfil de Alvaro Valverde">
     <div class="presentation__info">
-	    <h2>{config.title}</h2>
-        <h1>Junior full stack developer</h1>
+	    <h1>{config.title}</h1>
+        <h2>Software engineering student</h2>
         <Socials />
     </div>
 </section>
@@ -28,15 +28,16 @@
         border-radius: 50%;
     }
 
-    .presentation .presentation__info h1 {
+    .presentation .presentation__info h2 {
         margin-top: var(--spacing-32);
         margin-bottom: var(--spacing-32);
-        font-size: clamp(var(--font-26), 4vw, var(--font-48));
+        text-transform: none;
     }
 
-    .presentation .presentation__info h2 {
+    .presentation .presentation__info h1 {
         margin-top: var(--spacing-24);
         margin-bottom: var(--spacing-24);
+        font-size: clamp(var(--font-26), 4vw, var(--font-48));
     }
     
 	@media (max-width: 768px) {
@@ -57,12 +58,12 @@
             height: 20rem;
         }
         
-        .presentation .presentation__info h1 {
+        .presentation .presentation__info h2 {
             margin-top: var(--spacing-24);
             margin-bottom: var(--spacing-24);
         }
 
-        .presentation .presentation__info h2 {
+        .presentation .presentation__info h1 {
             margin-top: var(--spacing-16);
             margin-bottom: var(--spacing-16);
         }

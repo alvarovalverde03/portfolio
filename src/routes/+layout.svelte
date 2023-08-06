@@ -25,7 +25,7 @@
 <style>
     .layout {
         height: 100%;
-        max-inline-size: 1000px;
+        max-inline-size: 900px;
         display: grid;
         grid-template-rows: 1fr auto; /* with header -> auto 1fr auto */
         margin-inline: auto;

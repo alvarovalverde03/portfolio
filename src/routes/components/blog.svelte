@@ -33,6 +33,7 @@
 
     .post:hover {
         background: var(--clr-bg-2);
+        color: var(--clr-txt);
     }
     
     .post .title {
@@ -41,7 +42,7 @@
 
     @media (max-width: 1000px) {
         section {
-            padding: 0 3rem;
+            padding: 0 2rem;
         }
     }
 </style>

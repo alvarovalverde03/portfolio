@@ -38,6 +38,7 @@
 
 	/* Border radius */
 	--rounded-4: 4px;
+	--rounded-8: 8px;
 	--rounded-20: 20px;
 }
 
@@ -73,12 +74,12 @@ h2 {
 }
 
 h1 {
-	font-size: clamp(var(--font-24), 4vw, var(--font-48));
+	font-size: clamp(var(--font-32), 4vw, var(--font-48));
 	line-height: clamp(48px, 6vw, 64px);
 }
 
 h2 {
-	font-size: clamp(var(--font-24), 4vw, var(--font-40));
+	font-size: clamp(var(--font-24), 4vw, var(--font-32));
 	line-height: clamp(32px, 6vw, 48px);
 }
 
@@ -99,11 +100,9 @@ a {
 	z-index: 1;
 }
 
-/*
 a:hover {
 	color: var(--clr-primary);
 }
-*/
 
 a::before {
 	content: '';

@@ -46,7 +46,7 @@
 	
     @media (max-width: 1000px) {
         article {
-            padding: 0 3rem;
+            padding: 0 2rem;
         }
 
 		.back {

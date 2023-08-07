@@ -79,3 +79,11 @@ article hgroup {
 .prose code {
     font-family: var(--font-mono);
 }
+
+.prose table {
+    margin: auto;
+}
+
+.prose table td, th {
+    border: 2px solid var(--clr-txt);
+}

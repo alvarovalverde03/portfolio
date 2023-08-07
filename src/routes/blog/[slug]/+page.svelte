@@ -31,6 +31,7 @@
     .back {
         margin-top: 2.5rem;
         display: block;
+		width: fit-content;
     }
     .back svg {
 		width: 3rem;

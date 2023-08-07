@@ -1,4 +1,4 @@
-export type Categories = 'sveltekit' | 'react' | 'nodejs'
+export type Categories = 'sveltekit' | 'react' | 'nodejs' | 'git'
 
 export type Post = {
 	title: string

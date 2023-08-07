@@ -7,8 +7,16 @@
 <!-- SEO -->
 <svelte:head>
 	<title>{data.meta.title}</title>
+    <meta name="description" content={data.meta.description} />
+
 	<meta property="og:type" content="article" />
+	<meta property="og:url" content="https://alvarovalverde.dev" />
 	<meta property="og:title" content={data.meta.title} />
+	<meta property="og:description" content={data.meta.description} />
+
+	<meta name="twitter:title" content={data.meta.title} />
+	<meta name="twitter:description" content={data.meta.description} />
+	<meta name="twitter:card" content="summary" />
 </svelte:head>
 
 <a href="/" class="back">

@@ -1,6 +1,7 @@
 ---
 title: How to write better git commit messages
 description: Learn how to write better commit messages in git. When you first start programming commits can be confusing, but by maintaining a structure in your commit messages you will eventually gain control over them
+slug: write-better-git-commit-messages
 date: '2023-08-07'
 categories:
   - git

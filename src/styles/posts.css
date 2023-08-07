@@ -1,7 +1,3 @@
-article hgroup {
-    margin-top: var(--spacing-64);
-}
-
 .prose h2 {
     margin-top: var(--spacing-64);
     margin-bottom: var(--spacing-24);

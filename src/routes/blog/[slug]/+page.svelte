@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { PageData } from './$types';
+	import { formatDate } from '$lib/utils';
 
     export let data: PageData;
 </script>
@@ -28,6 +29,7 @@
     <!-- Title -->
 	<hgroup>
 		<h1>{data.meta.title}</h1>
+		<p class="published_date">{formatDate(data.meta.date)}</p>
 	</hgroup>
 
     <div class="prose">
@@ -46,6 +48,17 @@
 		height: 3rem;
 		
 		filter: var(--clr-svg);
+	}
+
+	article hgroup {
+		margin-top: var(--spacing-64);
+		margin-bottom: var(--spacing-32);
+	}
+
+	.published_date {
+		margin-top: 0.5rem;
+		opacity: 0.7;
+		font-size: var(--post-txt-size);
 	}
 
     h1 {

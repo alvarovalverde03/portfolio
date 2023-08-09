@@ -42,6 +42,7 @@
 	tab-size: 2;
     background: var(--clr-bg-3);
     overflow-x: auto;
+    white-space: pre-wrap;
 }
 
 .prose img {

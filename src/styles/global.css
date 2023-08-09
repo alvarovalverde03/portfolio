@@ -140,3 +140,7 @@ img,
 iframe {
 	border-radius: var(--rounded-20);
 }
+
+svg {
+	filter: var(--clr-svg);
+}

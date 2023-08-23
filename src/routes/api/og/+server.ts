@@ -11,16 +11,14 @@ const inter = await fetch('https://alvarovalverde.dev/fonts/Inter-Bold.ttf').the
 )
 
 /** @type {import('./$types').RequestHandler} */
-export const GET = async () => {
-    const html = {
-        type: 'div',
-        props: {
-        children: 'Alvaro Valverde ello, world',
-        style: {color: 'red'}
-        }
-    }
+export const GET = async ({url}) => {
+    const message = url.searchParams.get('message') ?? undefined;
+    const result = OgCard.render({message});
+1
+    const element = html(`${result.html}<style>${result.css.code}</style>`);
+    
 
-    const svg = await satori(html, {
+    const svg = await satori(element, {
         fonts: [
             {
                 name: 'Inter',

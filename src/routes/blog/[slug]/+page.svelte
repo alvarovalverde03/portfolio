@@ -2,7 +2,7 @@
     import type { PageData } from './$types';
 	import { formatDate } from '$lib/utils';
 	import BackIcon from '$lib/icons/BackIcon.svelte';
-	import { title } from '$lib/config';
+	import { title, og_url } from '$lib/config';
 
     export let data: PageData;
 </script>
@@ -16,7 +16,7 @@
 	<meta property="og:url" content="https://alvarovalverde.dev" />
 	<meta property="og:title" content={data.meta.title} />
 	<meta property="og:description" content={data.meta.description} />
-	<meta property="og:image" content="https://portfolio-7rvgx02v7-alvarovalverde.vercel.app/api/og?message={data.meta.title}"  />
+	<meta property="og:image" content="{og_url}?message={data.meta.title}"  />
 
 	<meta name="twitter:title" content={data.meta.title} />
 	<meta name="twitter:description" content={data.meta.description} />

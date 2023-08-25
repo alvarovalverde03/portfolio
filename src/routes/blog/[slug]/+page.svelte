@@ -20,7 +20,8 @@
 
 	<meta name="twitter:title" content={data.meta.title} />
 	<meta name="twitter:description" content={data.meta.description} />
-	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="{og_url}?message={data.meta.title}" />
 </svelte:head>
 
 <a href="/" class="back">

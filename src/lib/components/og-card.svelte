@@ -22,7 +22,6 @@
     span {
         display: flex;
 		font-size: 50px;
-        font-weight: 300;
 		background-color: #000;
         color: #fff;
 		width: 80%;

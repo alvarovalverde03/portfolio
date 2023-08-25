@@ -6,7 +6,7 @@ import OgCard from '$lib/components/og-card.svelte'
 const height = 400
 const width = 800
 
-const inter = await fetch('https://alvarovalverde.dev/fonts/Inter-Bold.ttf').then((res) =>
+const inter = await fetch('https://alvarovalverde.dev/fonts/Inter-Regular.ttf').then((res) =>
     res.arrayBuffer()
 )
 

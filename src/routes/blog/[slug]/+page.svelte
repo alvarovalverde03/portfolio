@@ -2,7 +2,7 @@
     import type { PageData } from './$types';
 	import { formatDate } from '$lib/utils';
 	import BackIcon from '$lib/icons/BackIcon.svelte';
-	import { title, og_url } from '$lib/config';
+	import { og_url } from '$lib/config';
 
     export let data: PageData;
 </script>
@@ -16,12 +16,12 @@
 	<meta property="og:url" content="https://alvarovalverde.dev" />
 	<meta property="og:title" content={data.meta.title} />
 	<meta property="og:description" content={data.meta.description} />
-	<meta property="og:image" content="{og_url}?message={data.meta.title}"  />
+	<meta property="og:image" content="{og_url}{data.meta.slug}.png"  />
 
 	<meta name="twitter:title" content={data.meta.title} />
 	<meta name="twitter:description" content={data.meta.description} />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:image" content="{og_url}?message={data.meta.title}" />
+	<meta name="twitter:image" content="{og_url}{data.meta.slug}.png" />
 </svelte:head>
 
 <a href="/" class="back">

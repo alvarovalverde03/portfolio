@@ -23,7 +23,7 @@ On the other hand, sometimes a lot of time is spent thinking about how to write 
 
 ## The Solution
 
-Basically, the solution that has made me keep an order in the commit messages I write is to define a clear structure (**standardize** git commit messages). It's inspired by [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to establish guidelines on which to base the commit structure. I show you how:
+Basically, defining a commit message structure (**standardize** git commit messages) is the solution that has helped me to keep order in my projects, especially when the commit list is very large. It's inspired by [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to establish guidelines on which to base the commit structure. I show you how:
 
 ```
 <type>: [optional icon] <message>
@@ -32,7 +32,7 @@ Basically, the solution that has made me keep an order in the commit messages I 
 [optional footer(s)]
 ```
 
-Firstly, a mandatory **type** indicating the type of commit. The commit type should be all lowercase, here're some examples of types:
+Firstly, a mandatory **type** indicating the type of commit. The commit type should be all lowercase. Here're some examples of types:
 
 - `feat`: new feature
 - `fix`: bug fix
@@ -67,7 +67,7 @@ Fifthly, an optional **footer(s)** to link to other commits, tasks or any extra 
 
 ## Conclusion
 
-Writing good commit messages in a standardized way will help you in both personal and team projects, both in terms of understanding yourself and communicating with other developers. No matter which structure you use, the important thing is to standardize the structure of commit messages. I'm sure you'll appreciate it when the repository grows.
+Writing good commit messages in a standardized way will help you in both personal and team projects, to understand yourself as well as to communicate with other developers. No matter which structure you use, the important thing is to standardize the structure of commit messages. I'm sure you'll appreciate it when the repository grows.
 
 But of course, you can't always write perfect commits. Don't block yourself  spending too much time thinking about what message to write. The key is to write it clearly and that's all.
 

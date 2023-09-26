@@ -10,6 +10,6 @@ export const load = (async ({ params }) => {
             meta: post.metadata
         }
     } catch (err) {
-        throw error(404, `Could not founr ${params.slug}`)
+        throw error(404, `This post does't exist`)
     }
 }) satisfies PageLoad;

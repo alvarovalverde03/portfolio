@@ -1,22 +1,66 @@
 <script lang="ts">
-    import { writable } from 'svelte/store';
+    import { browser } from '$app/environment'
 
-    let theme = writable('dark');
+    type Themes = { name: keyof typeof themes }
 
-    theme.subscribe((value) => {
-        if (typeof window !== 'undefined') {
-            // localStorage.setItem('theme', value);
-            document.documentElement.setAttribute('data-theme', value);
-        }
-    });
+    const themes = {
+        'dark': { name: 'dark' }, 
+        'light': { name: 'light' }
+    }
 
-    function toggleTheme() {
-        theme.update((value) => (value === 'dark' ? 'light' : 'dark'));
-    };
+    let selectedTheme = getTheme() ?? themes['dark']
+
+    function getTheme() {
+		if (!browser) return
+
+		const htmlElement = document.documentElement
+		const userTheme:keyof typeof themes = String(localStorage.theme) as keyof typeof themes
+		const prefersDarkMode = window.matchMedia(
+			'(prefers-color-scheme: dark)'
+		).matches
+		const prefersLightMode = window.matchMedia(
+			'(prefers-color-scheme: light)'
+		).matches
+
+		// check if the user set a theme
+		if (userTheme) {
+			htmlElement.dataset.theme = userTheme
+			return themes[userTheme]
+		}
+
+		// otherwise check for user preference
+		if (!userTheme && prefersDarkMode) {
+			htmlElement.dataset.theme = 'dark'
+			localStorage.setItem('theme', 'dark')
+		}
+		if (!userTheme && prefersLightMode) {
+			htmlElement.dataset.theme = 'light'
+			localStorage.setItem('theme', 'light')
+		}
+
+		// if nothing is set default to dark mode
+		if (!userTheme && !prefersDarkMode && !prefersLightMode) {
+			htmlElement.dataset.theme = 'dark'
+			localStorage.setItem('theme', 'dark')
+		}
+
+		return themes[userTheme]
+	}
+
+    function toggleTheme () {    
+        const htmlElement = document.documentElement;
+        const currentTheme = htmlElement.dataset.theme;
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        htmlElement.dataset.theme = newTheme;
+        localStorage.setItem("theme", newTheme);
+        selectedTheme = Object.values(themes).find(theme => theme.name === newTheme);
+    }
+
+    // document.documentElement.setAttribute('data-theme', value);
 </script>
 
 <button id="theme-toggle" on:click={toggleTheme}>
-    {#if $theme === 'dark'}
+    {#if selectedTheme.name === 'dark'}
         <span>🌙</span>
     {:else}
         <span>☀️</span>

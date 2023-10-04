@@ -1,5 +1,6 @@
 <script lang="ts">
-    import type { PageData } from './$types';
+	import * as config from '$lib/config';
+	import type { PageData } from './$types';
 	import { formatDate } from '$lib/utils';
 	import BackIcon from '$lib/icons/BackIcon.svelte';
 	import { og_url } from '$lib/config';
@@ -10,18 +11,19 @@
 <!-- SEO -->
 <svelte:head>
 	<title>{data.meta.title}</title>
-    <meta name="description" content={data.meta.description} />
+	<meta name="description" content={data.meta.description} />
+	<meta name="author" content={config.title}>
 
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://alvarovalverde.dev" />
 	<meta property="og:title" content={data.meta.title} />
 	<meta property="og:description" content={data.meta.description} />
-	<meta property="og:image" content="{og_url}{data.meta.slug}.png"  />
+	<meta property="og:image" content="{og_url}/blog/{data.meta.slug}.png"  />
 
 	<meta name="twitter:title" content={data.meta.title} />
 	<meta name="twitter:description" content={data.meta.description} />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:image" content="{og_url}{data.meta.slug}.png" />
+	<meta name="twitter:image" content="{og_url}/blog/{data.meta.slug}.png" />
 </svelte:head>
 
 <a href="/" class="back">

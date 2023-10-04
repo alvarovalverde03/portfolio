@@ -1,5 +1,5 @@
 <script lang="ts">
-    import * as config from '../lib/config';
+    import * as config from '$lib/config';
     import Presentation from "./components/presentation.svelte";
     import Blog from "./components/blog.svelte";
 
@@ -12,6 +12,16 @@
     <meta name="description" content={config.description}>
     <meta name="keywords" content="HTML, CSS, JavaScript, TypeScript, Full Stack, Frontend, Backend, Developer, NodeJS, Software Engineer">
     <meta name="author" content={config.title}>
+
+    <meta property="og:url" content={config.og_url}>
+    <meta property="og:image" content="/og/og-alvaro-valverde-blanco.png"/>
+    <meta property="og:title" content={config.title}/>
+    <meta property="og:description" content={config.description}/>
+
+	<meta name="twitter:title" content={config.title} />
+	<meta name="twitter:description" content={config.description} />
+	<meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/og/og-alvaro-valverde-blanco.png"/>
 </svelte:head>
 
 <Presentation />

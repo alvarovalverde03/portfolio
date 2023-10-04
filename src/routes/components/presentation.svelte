@@ -35,9 +35,14 @@
     }
 
     .presentation .presentation__info h1 {
-        margin-top: var(--spacing-24);
-        margin-bottom: var(--spacing-24);
+        margin-top: var(--spacing-32);
+        margin-bottom: var(--spacing-16);
         font-size: clamp(var(--font-26), 4vw, var(--font-48));
+    }
+
+    .presentation .presentation__info h2 {
+        opacity: 0.5;
+        margin-top: var(--spacing-16);
     }
     
 	@media (max-width: 768px) {
@@ -59,13 +64,13 @@
         }
         
         .presentation .presentation__info h2 {
-            margin-top: var(--spacing-24);
+            margin-top: var(--spacing-8);
             margin-bottom: var(--spacing-24);
         }
 
         .presentation .presentation__info h1 {
             margin-top: var(--spacing-16);
-            margin-bottom: var(--spacing-16);
+            margin-bottom: var(--spacing-8);
         }
 	}
 </style>

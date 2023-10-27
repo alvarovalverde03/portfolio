@@ -142,5 +142,10 @@ iframe {
 }
 
 svg {
-	filter: var(--clr-svg);
+	fill: var(--clr-svg);
+}
+
+a svg:hover,
+button svg:hover {
+	opacity: 0.7;
 }

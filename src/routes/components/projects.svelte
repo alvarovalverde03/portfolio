@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import NextJSIcon from "$lib/icons/techs/NextJSIcon.svelte"
 	import SocketIoIcon from "$lib/icons/techs/SocketIOIcon.svelte"
 	import NodeJSIcon from "$lib/icons/techs/NodeJSIcon.svelte"

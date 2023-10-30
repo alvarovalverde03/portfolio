@@ -47,6 +47,8 @@
 		background: none;
 		border: none;
 		cursor: pointer;
+		padding: 0;
+		margin: 0;
 		position: relative;
 		transition: transform 0.3s ease;
 	}

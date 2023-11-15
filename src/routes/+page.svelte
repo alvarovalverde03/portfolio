@@ -28,7 +28,7 @@
 <Presentation />
 
 <section style="font-size: var(--font-20); margin-bottom: 5rem">
-    <p>👋 Hi, I am Álvaro Valverde Blanco! Software engineering student based in Madrid</p>
+    <p>👋 Hi, I'm Álvaro Valverde, a Software Engineering student based in Madrid. I'm currently doing an internship at Elecnor Deimos, an exciting experience where I apply and expand my knowledge in the world of technological development. </p>
 </section>
 
 <Projects />

@@ -64,10 +64,10 @@
 		font-size: 1.8rem;
 		padding: 0.8rem 1.2rem;
 		text-wrap: nowrap;
-		transition: opacity 0.3s ease;
+		transition: all 0.3s ease;
 	}
 
 	button .tooltip.hide {
-		opacity: 0;
+		display: none;
 	}
 </style>

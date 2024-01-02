@@ -4,6 +4,8 @@
 	import NodeJSIcon from "$lib/icons/techs/NodeJSIcon.svelte"
 	import ExpressIcon from "$lib/icons/techs/ExpressIcon.svelte"
     import Tailwind from "$lib/icons/techs/Tailwind.svelte";
+	import PrismaIcon from "$lib/icons/techs/PrismaIcon.svelte";
+	import PostgreSqlIcon from "$lib/icons/techs/PostgreSQLIcon.svelte";
 </script>
 
 <section class="projects__cont">
@@ -18,7 +20,7 @@
                     <a href="https://github.com/alvarovalverde03/chat" target="_blank" class="project__link">View code</a>
                 </div>
                 <p class="project__description">
-                    Real-time chat web using Node.js, Express, and Socket.io on the backend, and Next.js with Tailwind CSS on the frontend. This project enables instant messaging and supports features like chat rooms.
+                    Real-time chat web using Node.js, Express, and Socket.io on the backend, Next.js with Tailwind CSS on the frontend and integrating Prisma ORM with PostgreSQL as database. This project enables instant messaging and supports features such as chat rooms.
                     <!-- future -> supports also user authentication, and message history -->
                 </p>
                 <div class="project__techs">
@@ -27,6 +29,8 @@
                     <SocketIoIcon />
                     <NextJSIcon />
                     <Tailwind />
+                    <PrismaIcon />
+                    <PostgreSqlIcon />
                 </div>
             </div>
         </div>
@@ -49,7 +53,7 @@
     }
 
     .project {
-        padding: var(--spacing-16) var(--spacing-24);
+        padding: var(--spacing-12) var(--spacing-16);
         background: transparent;
         border: 2px solid var(--clr-bg-3);
         border-radius: var(--rounded-4);
@@ -100,6 +104,13 @@
         align-items: flex-start;
     }
 
+    .project__description {
+        font-size: var(--font-16);
+        line-height: 28px;
+        opacity: 0.9;
+        text-wrap: pretty;
+    }
+
     .project__techs {
         display: flex;
         gap: var(--spacing-16);
@@ -119,7 +130,7 @@
             flex-direction: column-reverse;
             align-items: flex-start;
             gap: var(--spacing-16);
-            padding: var(--spacing-8) var(--spacing-16);
+            padding: var(--spacing-8) var(--spacing-12);
         }
 
         .project__info {

@@ -6,6 +6,7 @@
     import Tailwind from "$lib/icons/techs/Tailwind.svelte";
 	import PrismaIcon from "$lib/icons/techs/PrismaIcon.svelte";
 	import PostgreSqlIcon from "$lib/icons/techs/PostgreSQLIcon.svelte";
+	import Tooltip from "./tooltip.svelte";
 </script>
 
 <section class="projects__cont">
@@ -24,13 +25,27 @@
                     <!-- future -> supports also user authentication, and message history -->
                 </p>
                 <div class="project__techs">
-                    <NodeJSIcon />
-                    <ExpressIcon />
-                    <SocketIoIcon />
-                    <NextJSIcon />
-                    <Tailwind />
-                    <PrismaIcon />
-                    <PostgreSqlIcon />
+                    <Tooltip text="Node.js">
+                        <NodeJSIcon />
+                    </Tooltip>
+                    <Tooltip text="Express">
+                        <ExpressIcon />
+                    </Tooltip>
+                    <Tooltip text="Socket.IO">
+                        <SocketIoIcon />
+                    </Tooltip>
+                    <Tooltip text="Next.js">
+                        <NextJSIcon />
+                    </Tooltip>
+                    <Tooltip text="Tailwind CSS">
+                        <Tailwind />
+                    </Tooltip>
+                    <Tooltip text="Prisma">
+                        <PrismaIcon />
+                    </Tooltip>
+                    <Tooltip text="PostgreSQL">
+                        <PostgreSqlIcon />
+                    </Tooltip>
                 </div>
             </div>
         </div>
@@ -114,7 +129,6 @@
     .project__techs {
         display: flex;
         gap: var(--spacing-16);
-        opacity: 0.5;
         margin-top: var(--spacing-8);
     }
 

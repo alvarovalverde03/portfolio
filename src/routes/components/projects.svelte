@@ -7,48 +7,73 @@
 	import PrismaIcon from "$lib/icons/techs/PrismaIcon.svelte";
 	import PostgreSqlIcon from "$lib/icons/techs/PostgreSQLIcon.svelte";
 	import Tooltip from "./tooltip.svelte";
+
+    const projects = [
+        {
+            title: "Real-Time Chat",
+            imageUrl: "/projects/websockets-chat.png",
+            description: "Real-time chat web using Node.js, Express, and Socket.io on the backend, Next.js with Tailwind CSS on the frontend and integrating Prisma ORM with PostgreSQL as database. This project enables instant messaging and supports features such as chat rooms.",
+            liveDemoUrl: "https://chat.alvarovalverde.dev",
+            codeUrl: "https://github.com/alvarovalverde03/websockets-chat",
+            techs: [
+                {
+                    name: "Node.js",
+                    icon: NodeJSIcon
+                },
+                {
+                    name: "Express",
+                    icon: ExpressIcon
+                },
+                {
+                    name: "Socket.IO",
+                    icon: SocketIoIcon
+                },
+                {
+                    name: "Next.js",
+                    icon: NextJSIcon
+                },
+                {
+                    name: "Tailwind CSS",
+                    icon: Tailwind
+                },
+                {
+                    name: "Prisma",
+                    icon: PrismaIcon
+                },
+                {
+                    name: "PostgreSQL",
+                    icon: PostgreSqlIcon
+                }
+            ],
+        },
+    ]
 </script>
 
 <section class="projects__cont">
     <h2 class="title">Projects</h2>
     <div class="projects">
-        <div class="project">
-            <img src="/projects/websockets-chat.png" alt="Portfolio" class="project__image">
-            <div class="project__info">
-                <h3 class="project__title">Real-Time Chat</h3>
-                <div class="project__links">
-                    <a href="https://chat.alvarovalverde.dev" target="_blank" class="project__link">Live demo</a>
-                    <a href="https://github.com/alvarovalverde03/chat" target="_blank" class="project__link">View code</a>
-                </div>
-                <p class="project__description">
-                    Real-time chat web using Node.js, Express, and Socket.io on the backend, Next.js with Tailwind CSS on the frontend and integrating Prisma ORM with PostgreSQL as database. This project enables instant messaging and supports features such as chat rooms.
-                    <!-- future -> supports also user authentication, and message history -->
-                </p>
-                <div class="project__techs">
-                    <Tooltip text="Node.js">
-                        <NodeJSIcon />
-                    </Tooltip>
-                    <Tooltip text="Express">
-                        <ExpressIcon />
-                    </Tooltip>
-                    <Tooltip text="Socket.IO">
-                        <SocketIoIcon />
-                    </Tooltip>
-                    <Tooltip text="Next.js">
-                        <NextJSIcon />
-                    </Tooltip>
-                    <Tooltip text="Tailwind CSS">
-                        <Tailwind />
-                    </Tooltip>
-                    <Tooltip text="Prisma">
-                        <PrismaIcon />
-                    </Tooltip>
-                    <Tooltip text="PostgreSQL">
-                        <PostgreSqlIcon />
-                    </Tooltip>
+        {#each projects as p}
+            <div class="project">
+                <img src={p.imageUrl} alt="Portfolio" class="project__image">
+                <div class="project__info">
+                    <h3 class="project__title">{p.title}</h3>
+                    <div class="project__links">
+                        <a href={p.liveDemoUrl} target="_blank" rel="noopener noreferrer" class="project__link">Live demo</a>
+                        <a href={p.codeUrl} target="_blank" rel="noopener noreferrer" class="project__link">View code</a>
+                    </div>
+                    <p class="project__description">
+                        {p.description}
+                    </p>
+                    <div class="project__techs">
+                        {#each p.techs as tech}
+                            <Tooltip text={tech.name}>
+                                <svelte:component this={tech.icon} />
+                            </Tooltip>
+                        {/each}
+                    </div>
                 </div>
             </div>
-        </div>
+        {/each}
     </div>
 </section>
 

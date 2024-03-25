@@ -23,7 +23,7 @@
 		left: 50%;
 		transform: translate(-50%, -100%);
 		padding: 0.8rem 1.4rem;
-		color: var(--clr-txt);
+		color: var(--clr-txt-2);
 		background: var(--clr-bg-2);
 		font-weight: normal;
 		font-size: 1.4rem;
@@ -35,6 +35,10 @@
 		opacity: 0;
         transition: opacity 0.2s ease, visibility 0.2s ease;
 	}
+
+    .tooltip .top span {
+        text-wrap: nowrap;
+    }
 
 	.tooltip:hover .top {
 		visibility: visible;

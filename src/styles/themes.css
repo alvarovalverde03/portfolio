@@ -1,6 +1,7 @@
 html[data-theme='dark'] {
     /* Global */
 	--clr-txt: #fff;
+	--clr-txt-2: #e6e6e6;
 	--clr-bg: #000;
 	--clr-bg-2: #171717;
 	--clr-bg-3: #1e1e1e;
@@ -10,6 +11,7 @@ html[data-theme='dark'] {
 html[data-theme='light'] {
     /* Global */
 	--clr-txt: #000;
+	--clr-txt-2: #1a1a1a;
 	--clr-bg: #fff;
 	--clr-bg-2: #b3b3b3;
 	--clr-bg-3: #dbdbdb;

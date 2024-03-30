@@ -2,23 +2,24 @@
 	import EmailIcon from "$lib/icons/EmailIcon.svelte"
 	import GitHubIcon from "$lib/icons/GitHubIcon.svelte"
 	import LinkedInIcon from "$lib/icons/LinkedInIcon.svelte"
+	import Tooltip from "./tooltip.svelte";
 
 	const emailText = 'alvarovalverdeblanco@gmail.com'
+	const tooltipTimeout = 1000
+	let tooltipText = 'Copy email'
 
 	function copyToClippboard(event: MouseEvent) {
 		navigator.clipboard.writeText(emailText)
 
 		const button = event.currentTarget as HTMLButtonElement
-    	const tooltip = button.querySelector('.tooltip') as HTMLDivElement
-		if (!tooltip) return
 
-		tooltip.classList.remove('hide')
+		tooltipText = 'Copied!'
 		button.style.transform = 'translateY(-0.3rem)'
 	
 		setTimeout(() => {
-			tooltip.classList.add('hide')
-		button.style.transform = 'translateY(0rem)'
-		}, 1000)
+			tooltipText = 'Copy email'
+			button.style.transform = 'translateY(0rem)'
+		}, tooltipTimeout)
 	}
 </script>
 
@@ -30,10 +31,9 @@
         <GitHubIcon />
 	</a>
 	<button on:click={copyToClippboard}>
-		<EmailIcon />
-		<div class="tooltip hide">
-			<span>Copied!</span>
-		</div>
+		<Tooltip text={tooltipText}>
+			<EmailIcon />
+		</Tooltip>
 	</button>
 </div>
 
@@ -51,23 +51,5 @@
 		margin: 0;
 		position: relative;
 		transition: transform 0.3s ease;
-	}
-
-	button .tooltip {
-		opacity: 1;
-		position: absolute;
-		top: -3.6rem;
-		left: -1.7rem;
-		color: var(--clr-txt);
-		background: var(--clr-bg-2);
-		border-radius: 4px;
-		font-size: 1.8rem;
-		padding: 0.8rem 1.2rem;
-		text-wrap: nowrap;
-		transition: all 0.3s ease;
-	}
-
-	button .tooltip.hide {
-		display: none;
 	}
 </style>

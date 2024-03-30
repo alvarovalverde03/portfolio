@@ -4,7 +4,13 @@
 </script>
 
 <section class="presentation">
-    <img class="presentation__profile_img" src="/alvaro.jpg" alt="Foto de perfil de Alvaro Valverde">
+    <img 
+        class="presentation__profile_img" 
+        src="/alvaro.webp" 
+        alt="Alvaro Valverde's profile" 
+        decoding="async"
+        loading="eager"
+    />
     <div class="presentation__info">
 	    <h1>{config.title}</h1>
         <h2>Software engineering student</h2>

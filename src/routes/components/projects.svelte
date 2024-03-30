@@ -11,7 +11,7 @@
     const projects = [
         {
             title: "Real-Time Chat",
-            imageUrl: "/projects/websockets-chat.png",
+            imageUrl: "/projects/websockets-chat.webp",
             description: "Real-time chat web using Node.js, Express, and Socket.io on the backend, Next.js with Tailwind CSS on the frontend and integrating Prisma ORM with PostgreSQL as database. This project enables instant messaging and supports features such as chat rooms.",
             liveDemoUrl: "https://chat.alvarovalverde.dev",
             codeUrl: "https://github.com/alvarovalverde03/websockets-chat",

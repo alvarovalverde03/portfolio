@@ -7,8 +7,49 @@
 	import PrismaIcon from "$lib/icons/techs/PrismaIcon.svelte";
 	import PostgreSqlIcon from "$lib/icons/techs/PostgreSQLIcon.svelte";
 	import Tooltip from "./tooltip.svelte";
+	import ChromaIcon from "$lib/icons/techs/ChromaIcon.svelte";
+	import LangChainIcon from "$lib/icons/techs/LangChainIcon.svelte";
+	import TypeScriptIcon from "$lib/icons/techs/TypeScriptIcon.svelte";
+	import DrizzleIcon from "$lib/icons/techs/DrizzleIcon.svelte";
 
     const projects = [
+        {
+            title: "AlienAI Chat",
+            imageUrl: "/projects/alienai-chat.webp",
+            description: "AI chatbot website built with Next.js, Tailwind CSS, LangChain with TypeScript and Chroma as vector database. It implements a RAG architecture tailored for a fictitious company named AlienAI S.L.. The chatbot provides answers from the company's knowledge archive, accompanied by referenced source documents.",
+            liveDemoUrl: "https://ai.alvarovalverde.dev",
+            codeUrl: "https://github.com/alvarovalverde03/alien-ai-chat",
+            techs: [
+                {
+                    name: "Next.js",
+                    icon: NextJSIcon
+                },
+                {
+                    name: "Tailwind CSS",
+                    icon: Tailwind
+                },
+                {
+                    name: "LangChain",
+                    icon: LangChainIcon
+                },
+                {
+                    name: "TypeScript",
+                    icon: TypeScriptIcon
+                },
+                {
+                    name: "Chroma DB",
+                    icon: ChromaIcon
+                },
+                {
+                    name: "Drizzle ORM",
+                    icon: DrizzleIcon
+                },
+                {
+                    name: "PostgreSQL",
+                    icon: PostgreSqlIcon
+                },
+            ],
+        },
         {
             title: "Real-Time Chat",
             imageUrl: "/projects/websockets-chat.webp",
@@ -67,7 +108,9 @@
                     <div class="project__techs">
                         {#each p.techs as tech}
                             <Tooltip text={tech.name}>
+                                <div class="project__techs__tech">
                                 <svelte:component this={tech.icon} />
+                            </div>
                             </Tooltip>
                         {/each}
                     </div>
@@ -155,6 +198,12 @@
         display: flex;
         gap: var(--spacing-16);
         margin-top: var(--spacing-8);
+    }
+
+    .project__techs__tech {
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
 
     @media (max-width: 1000px) {
